@@ -14,11 +14,12 @@
 				 sensores de temperatura, pressão de pnéu, líquido de arrefecimento dos carros.
 
 
-(b) para eletrodomésticos: Controle de todo o sistema de lavagem de uma máquina de lavar.
+(b) para eletrodomésticos: Controle de todo o sistema de lavagem de uma máquina de lavar, como fluxo de água quente e fria, acionamento e velocidade dos motores de giro do tambor,
+	                   acionamento das bombas de sucção de água suja.
 
 
 
-(c) para automação industrial.
+(c) para automação industrial: 
 
 
 
