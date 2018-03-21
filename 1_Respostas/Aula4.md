@@ -1,4 +1,4 @@
-Para todas as questões, considere que as variáveis `f`, `g`, `h`, `i` e `j` são do tipo inteiro (16 bits na arquitetura do MSP430), e que o vetor `A[]` é do tipo inteiro. Estas variáveis estão armazenadas nos seguintes registradores:
+### Para todas as questões, considere que as variáveis `f`, `g`, `h`, `i` e `j` são do tipo inteiro (16 bits na arquitetura do MSP430), e que o vetor `A[]` é do tipo inteiro. Estas variáveis estão armazenadas nos seguintes registradores:
 
 - f: R4
 - g: R5
@@ -7,42 +7,46 @@ Para todas as questões, considere que as variáveis `f`, `g`, `h`, `i` e `j` s�
 - j: R8
 - A: R9
 
-Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores temporários.
+### Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores temporários.
 
-1. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w e sub.w.
+## 1. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w e sub.w.
 
-(a) `f = 0;`
+### (a) `f = 0;`
 
-(b) `g++;`
+  mov.w 0,R4;
 
-(c) `h--;`
+### (b) `g++;`
 
-(d) `i += 2;`
+  add.w R
 
-(e) `j -= 2;`
+### (c) `h--;`
 
-2. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w, sub.w, clr.w, dec.w, decd.w, inc.w e incd.w.
+### (d) `i += 2;`
 
-(a) `f = 0;`
+### (e) `j -= 2;`
 
-(b) `g++;`
+## 2. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w, sub.w, clr.w, dec.w, decd.w, inc.w e incd.w.
 
-(c) `h--;`
+### (a) `f = 0;`
 
-(d) `i += 2;`
+### (b) `g++;`
 
-(e) `j -= 2;`
+### (c) `h--;`
 
-3. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w, sub.w, clr.w, dec.w, decd.w, inc.w e incd.w.
+### (d) `i += 2;`
 
-(a) `f *= 2;`
+### (e) `j -= 2;`
 
-(b) `g *= 3;`
+## 3. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w, sub.w, clr.w, dec.w, decd.w, inc.w e incd.w.
 
-(c) `h *= 4;`
+### (a) `f *= 2;`
 
-(d) `A[2] = A[1] + A[0];`
+### (b) `g *= 3;`
 
-(e) `A[3] = 2*f - 4*h;`
+### (c) `h *= 4;`
 
-(f) `A[3] = 2*(f - 2*h);`
+### (d) `A[2] = A[1] + A[0];`
+
+### (e) `A[3] = 2*f - 4*h;`
+
+### (f) `A[3] = 2*(f - 2*h);`
