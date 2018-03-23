@@ -51,51 +51,75 @@
 
 ## 2. Considerando a placa Launchpad do MSP430, escreva o código em C para piscar os dois LEDs ininterruptamente.
 
-#include <msp430fr2433>
-#define LED1 BIT0
-#define LED2 BIT6
+	#include <msp430fr2433>
+	#define LED1 BIT0
+	#define LED2 BIT6
 
-void main(void)
-{
-	int count = 0;
-	WDTCTL = WDTPW | WDTHOLD;
-	PIDIR = LED1 + LED2;
-	PIOUT = 0;
-	for(;;)
-			{
-				PIOUT ^= (LED1 + LED2);
-				for(count = 0, count < "valor", count++){
+	void main(void)
+	{
+		int count = 0;
+		WDTCTL = WDTPW | WDTHOLD;
+		PIDIR = LED1 + LED2;
+		PIOUT = 0;
+		for(;;)
+				{
+					PIOUT ^= (LED1 + LED2);
+					for(count = 0, count < "valor", count++){
+					}
 
 				}
 
-			}
 
-
-}
+	}
 
 
 
 ## 3. Considerando a placa Launchpad do MSP430, escreva o código em C para piscar duas vezes os dois LEDs sempre que o usuário pressionar o botão.
 
-#include <msp430fr2433>
-#define LED1 BIT0
-#define LED2 BIT6
-#define BTN BIT2
-void main(void)
-{
-	WDTCTL = WDTPW | WDTHOLD;
-	PIDIR = LED1 + LED2;
-	PIOUT = 0
+	#include <msp430fr2433>
+	#define LED1 BIT0
+	#define LED2 BIT6
+	#define BTN BIT2
+	void main(void)
+	{
+		WDTCTL = WDTPW | WDTHOLD;
+		P1DIR = LED1 + LED2;
+		P1OUT = ~(LED1 + LED2);
+		P2DIR |= BTN;
+		P2OUT |= BTN;  |  
 
-	while( 1 );
-		{
-
-		}
-
-
-}
+		while(1);
+			{
+				if ((P1DIR&BTN)==0)
+					P1OUT = (LED1 + LED2) + BTN;
+				else
+					P1OUT = ~(LED1 + LED2);
+			}
+	}
 
 ## 4. Considerando a placa Launchpad do MSP430, faça uma função em C que pisca os dois LEDs uma vez.
+
+	#include <msp430fr2433>
+	#define LED1 BIT0
+	#define LED2 BIT6
+
+	void main(void)
+	{
+		int count = 0;
+		WDTCTL = WDTPW | WDTHOLD;
+		PIDIR = LED1 + LED2;
+		PIOUT = 0;
+		for(;;)
+				{
+					int i;
+					if(i = 0, int < 2, int++){
+						PIOUT ^= (LED1 + LED2);
+						for(count = 0, count < "valor", count++){}
+
+					}
+				}
+	}
+
 
 ## 5. Reescreva o código da questão 2 usando a função da questão 4.
 
