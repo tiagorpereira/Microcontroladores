@@ -1,22 +1,59 @@
-## Para todas as questões, considere que as variáveis `f`, `g`, `h`, `i` e `j` são do tipo inteiro (16 bits na arquitetura do MSP430), e que o vetor `A[]` é do tipo inteiro. Estas variáveis estão armazenadas nos seguintes registradores:
-
+## Para as questões 2 a 5, considere que as variáveis `f`, `g`, `h`, `i` e `j` são do tipo inteiro (16 bits na arquitetura do MSP430), e que o vetor `A[]` é do tipo inteiro. Estas variáveis estão armazenadas nos seguintes registradores:
 - f: R4
 - g: R5
 - h: R6
 - i: R7
 - j: R8
 - A: R9
-
 ## Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores temporários.
 
-## 1. Traduza as seguintes linhas em C para a linguagem assembly do MSP430. Utilize somente as seguintes instruções: mov.w, add.w, sub.w, clr.w, dec.w, decd.w, inc.w e incd.w.
+## 1. Escreva os trechos de código assembly do MSP430 para:
+###	(a) Somente setar o bit menos significativo de R5.
+```
+BIS #1,R5
+```
+###	(b) Somente setar dois bits de R6: o menos significativo e o segundo menos significativo.
+```
+BIS #3,R6
+```
+###	(c) Somente zerar o terceiro bit menos significativo de R7.
+```
+BIC #4,R7
+```
+###	(d) Somente zerar o terceiro e o quarto bits menos significativo de R8.
+```
+BIC #C,R8
+```
+###	(e) Somente inverter o bit mais significativo de R9.
+```
+XOR #8000,R9
+```
+###	(f) Inverter o nibble mais significativo de R10, e setar o nibble menos significativo de R10.
+```
+XOR #F000,R10
+BIS #F,R10
+```
+## 2. "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
 
-### (a) `f *= 5;`
+```C
+if(i>j) f = g+h+10;
+else f = g-h-10;
+```
 
-### (b) `g *= 6;`
+## 3. "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
 
-### (d) `A[2] = 6*A[1] + 5*A[0];`
+```C
+while(save[i]!=k) i++;
+```
 
-### (e) `A[3] = 3*f - 5*h;`
+## 4. "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
 
-### (f) `A[5] = 6*(f - 2*h);`
+```C
+for(i=0; i<100; i++) A[i] = i*2;
+```
+
+## 5. "Traduza" o seguinte trecho de código em C para o assembly do MSP430:
+
+```C
+for(i=99; i>=0; i--) A[i] = i*2;
+```
