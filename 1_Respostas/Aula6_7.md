@@ -12,7 +12,28 @@ x(n+1) = (x(n) + S/x(n))/2
 unsigned int Raiz_Quadrada(unsigned int S);
 ```
 
+```C
+unsigned int Raiz_Quadrada(unsigned int S)
+{
+  int count;
+  int x = 1;
+  if (S < 2)
+    return s; //Equação não funciona para valores menores que 2
+  else
+  {
+    for(count = 0, count < 100, count++)
+      x = (x + (S/x))/2;
+    return x //Retorna o calculo da raiz quadrada x
+  }
+}
+```
+
 ### (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. A variável `S` é fornecida pelo registrador R15, e a raiz quadrada de `S` (ou seja, a variável `x`) é fornecida pelo registrador R15 também.
+
+```
+Raiz_Quad:
+
+```
 
 ## 2. Resolva as questões abaixo:
 
