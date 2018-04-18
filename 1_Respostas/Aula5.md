@@ -97,7 +97,7 @@ EXIT: ...
 for(i=99; i>=0; i--) A[i] = i*2;
 ```
 
-```
+```assembly
 mov.w #63,R7;
 
 FOR:mov.w R7,R11 ;R7=i, R11 = Temporario
