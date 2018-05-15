@@ -1,0 +1,41 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../lnk_msp430fr2433.cmd 
+
+C_SRCS += \
+../Aula3_Q1.c \
+../Aula3_Q3.c \
+../main.c 
+
+C_DEPS += \
+./Aula3_Q1.d \
+./Aula3_Q3.d \
+./main.d 
+
+OBJS += \
+./Aula3_Q1.obj \
+./Aula3_Q3.obj \
+./main.obj 
+
+OBJS__QUOTED += \
+"Aula3_Q1.obj" \
+"Aula3_Q3.obj" \
+"main.obj" 
+
+C_DEPS__QUOTED += \
+"Aula3_Q1.d" \
+"Aula3_Q3.d" \
+"main.d" 
+
+C_SRCS__QUOTED += \
+"../Aula3_Q1.c" \
+"../Aula3_Q3.c" \
+"../main.c" 
+
+

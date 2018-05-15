@@ -1,0 +1,45 @@
+
+**** Build of configuration Debug for project Prova_2_Micro ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../Aula3_Q3.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Tiago.DESKTOP-6M955DK/Documents/GitHub/Microcontroladores/4_Testes_C_files" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="Aula3_Q3.d_raw"  "../Aula3_Q3.c"
+ 
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'Aula3_Q3.obj' failed
+"../Aula3_Q3.c", line 1: fatal error #1965: cannot open source file "msp430"
+1 catastrophic error detected in the compilation of "../Aula3_Q3.c".
+Compilation terminated.
+gmake: *** [Aula3_Q3.obj] Error 1
+Building file: "../teste.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Tiago.DESKTOP-6M955DK/Documents/GitHub/Microcontroladores/4_Testes_C_files" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="teste.d_raw"  "../teste.c"
+ 
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'teste.obj' failed
+"C:/Users/Tiago.DESKTOP-6M955DK/Documents/GitHub/Microcontroladores/4_Testes_C_files/legacymsp430.h", line 62: warning #48-D: incompatible redefinition of macro "_EINT" (declared at line 39 of "C:\ti\ccsv8\ccs_base\msp430\include\in430.h")
+"C:/Users/Tiago.DESKTOP-6M955DK/Documents/GitHub/Microcontroladores/4_Testes_C_files/legacymsp430.h", line 63: warning #48-D: incompatible redefinition of macro "_DINT" (declared at line 40 of "C:\ti\ccsv8\ccs_base\msp430\include\in430.h")
+"../teste.c", line 12: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../teste.c", line 30: error #20: identifier "BCSCTL1" is undefined
+"../teste.c", line 30: error #20: identifier "CALBC1_1MHZ" is undefined
+"../teste.c", line 31: error #20: identifier "DCOCTL" is undefined
+"../teste.c", line 31: error #20: identifier "CALDCO_1MHZ" is undefined
+"../teste.c", line 40: error #20: identifier "TACCR0" is undefined
+"../teste.c", line 41: error #20: identifier "TACTL" is undefined
+"../teste.c", line 48: error #20: identifier "TAR" is undefined
+"../teste.c", line 48: remark #1538-D: (ULP 10.1) ISR Interrupcao_P1 calls function blink. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../teste.c", line 49: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+7 errors detected in the compilation of "../teste.c".
+gmake: *** [teste.obj] Error 1
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Tiago.DESKTOP-6M955DK/Documents/GitHub/Microcontroladores/4_Testes_C_files" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 15: remark #1528-D: (ULP 3.1) Detected flag polling using TAIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 19: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

@@ -1,0 +1,60 @@
+#include <msp430fr2433.h>
+#include <msp430.h> // Para rodar interrupcoes
+
+#define LED1 BIT0
+#define LED2 0x06
+#define LEDS (LED1|LED2)
+#define BTN BIT3
+#define CAPT BIT7
+#define LED_DLY 10000
+
+// Não funciona, não sei que tipo de entrada é CAPT
+
+
+void delay(volatile unsigned long int t)
+{
+    while(t--);
+}
+
+void blink(int num_blink)
+{
+    while(num_blink>0)
+    {
+        num_blink--;
+        P1OUT ^= LED2;
+        delay(LED_DLY);
+        P1OUT ^= LED2;
+        delay(LED_DLY);
+    }
+}
+
+int main(void)
+{
+    WDTCTL = WDTPW + WDTHOLD;
+
+    CSCTL1 = 0xF1;      //MCLK e SMCLK @ 1MHz
+    CSCTL0 = 0x00;       //MCLK e SMCLK @ 1MHz
+
+    P1DIR |= LEDS;
+    P1OUT &= ~LEDS;
+    P2DIR &= ~BTN;
+    P2REN |= BTN;
+    P2OUT |= BTN;
+    P2DIR &= ~CAPT;
+    P2SEL0 |= CAPT;
+    P2SEL1 &= ~CAPT;
+
+    TA0CCR0 = 5;
+    TA0CCTL1 = CM_2 + CCIS_0 + SCS + CAP + CCIE;
+    TA0CTL = TASSEL_2 + ID_0 + MC_1;
+    _BIS_SR(LPM0_bits+GIE);
+    return 0;
+}
+
+#pragma vector = TIMER0_A1_VECTOR
+
+__interrupt void TA0_Capt1_ISR(void)
+{
+    blink(TA0R+1);
+    TA0CCTL1 &= ~CCIFG;
+}

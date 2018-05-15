@@ -1,0 +1,57 @@
+#include <msp430fr2433.h>
+#include <msp430.h> // Para rodar interrupcoes
+
+#define LED1 BIT0
+#define LED2 0x06
+#define LEDS (LED1|LED2)
+#define BTN BIT3
+#define LED_DLY 10000
+
+void delay(volatile unsigned long int t)
+{
+    while(t--);
+}
+
+void blink(int num_blink)
+{
+    while(num_blink>0)
+    {
+        num_blink--;
+        P1OUT ^= LEDS;
+        delay(LED_DLY);
+        P1OUT ^= LEDS;
+        delay(LED_DLY);
+    }
+}
+
+int main(void)
+{
+    WDTCTL = WDTPW + WDTHOLD;
+
+    PM5CTL0 &= ~LOCKLPM5;
+
+    CSCTL1 = 0xF1;      //MCLK e SMCLK @ 1MHz
+    CSCTL0 = 0x00;       //MCLK e SMCLK @ 1MHz
+
+    P1DIR |= LEDS;
+    P1OUT &= ~LEDS;
+    P2DIR &= ~BTN;
+    P2REN |= BTN;
+    P2OUT |= BTN;
+    P2IES |= BTN;
+    P2IE |= BTN;
+
+    TA0CCR0 = 5;
+    TA0CTL = TASSEL_2 + ID_2 + MC_1;
+    _BIS_SR(LPM0_bits+GIE);
+    return 0;
+}
+
+#pragma vector = PORT2_VECTOR
+
+__interrupt void Interrupcao_P1(void)
+{
+    blink(TA0R+1);
+    while((P2IN&BTN)==0);
+    P2IFG &= ~BTN;
+}

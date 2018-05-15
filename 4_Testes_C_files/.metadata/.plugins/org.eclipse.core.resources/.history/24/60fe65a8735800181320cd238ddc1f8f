@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <msp430fr2433.h>
+
+#define LED 0x06
+
+int main(void)
+{
+    WDTCTL = WDTPW + WDTHOLD;   // Stop WDT
+    PM5CTL0 &= ~LOCKLPM5;
+
+    CSCTL1 = 0xF1;      //MCLK e SMCLK @ 1MHz
+    CSCTL0 = 0x00;       //MCLK e SMCLK @ 1MHz
+    P1OUT &= ~LED;
+    P1DIR |= LED;
+    TA0CCR0 = 65500-1; //10000-1;
+    TA0CTL = TASSEL_1 + ID_0 + MC_2;
+    while(1)
+    {
+        while((TA0CTL & TAIFG)==0);
+        P1OUT ^= LED;
+        TA0CTL &= ~TA0IV_TAIFG;
+    }
+}

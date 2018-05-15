@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TimerA_Captura_pt2_MSPFR2433/hello.c&apos; to &apos;TimerA_Captura_pt2_MSPFR2433.c&apos;" description="Rename resource &apos;hello.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hello.c" name="TimerA_Captura_pt2_MSPFR2433.c" stamp="1526414700852" updateReferences="true"/>
+</session>

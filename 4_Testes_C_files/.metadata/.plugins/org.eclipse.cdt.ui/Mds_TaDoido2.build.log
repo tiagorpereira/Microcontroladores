@@ -1,0 +1,23 @@
+
+**** Build of configuration Debug for project Mds_TaDoido2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../hello.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Tiago.DESKTOP-6M955DK/Documents/CCS_TI/Mds_TaDoido2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="hello.d_raw"  "../hello.c"
+"../hello.c", line 12: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../hello.c", line 54: remark #1538-D: (ULP 10.1) ISR Interrupcao_P1 calls function blink. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../hello.c", line 55: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../hello.c"
+ 
+Building target: "Mds_TaDoido2.out"
+Invoking: MSP430 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/bin/cl430" -vmspx --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR2433__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Mds_TaDoido2.map" --heap_size=300 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv8/ccs_base/msp430/include" -i"C:/ti/ccsv8/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Mds_TaDoido2_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Mds_TaDoido2.out" "./hello.obj" "../lnk_msp430fr2433.cmd"  -llibmath.a -llibc.a 
+<Linking>
+warning #10421-D: For FRAM devices running at higher than 8MHz, FRAM waitstate needs to be configured accordingly.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "Mds_TaDoido2.out"
+ 
+
+**** Build Finished ****

@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Prova_2_Micro,org.eclipse.launchbar.core.descriptorType.default\:Hum_Boi,org.eclipse.launchbar.core.descriptorType.default\:Mds_Tadoido,org.eclipse.launchbar.core.descriptorType.default\:Mds_TaDoido2,org.eclipse.launchbar.core.descriptorType.default\:TimerA_Interrupt_MSPFR2433,org.eclipse.launchbar.core.descriptorType.default\:TimerA_Captura_pt2_MSPFR2433,org.eclipse.launchbar.core.descriptorType.default\:TimerA_MSPFR2433,org.eclipse.launchbar.core.descriptorType.default\:TimerA_Comp_breathing_led_1
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Hum_Boi/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Hum_Boi/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Mds_Tadoido/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Prova_2_Micro/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:Prova_2_Micro/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
