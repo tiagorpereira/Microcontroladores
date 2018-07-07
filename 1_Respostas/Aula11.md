@@ -317,7 +317,7 @@ void main(void) {
 
     //Delay criado de 0,25seg para ligar/desligar = 0,5Hz
     TA0CCR0 = 64499;     
-    TA0CTL = TASSEL_2 + ID_3 + MC_3 + TAIE;
+    TA0CTL = TASSEL_2 + ID_3 + MC_3 + TAIE; //modo up/down (metade que o modo up)
 
     __bis_SR_register(LPM0_bits | GIE);           // Enter LPM0 w/ interrupts
     __no_operation();                             // For debug
