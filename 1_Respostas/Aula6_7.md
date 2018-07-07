@@ -9,10 +9,6 @@ x(n+1) = (x(n) + S/x(n))/2
 ### O protótipo da função é:
 
 ```C
-unsigned int Raiz_Quadrada(unsigned int S);
-```
-
-```C
 unsigned int Raiz_Quadrada(unsigned int S)
 {
   int count;
