@@ -1,4 +1,4 @@
-## Para todas as questões abaixo, utilize o modo de comparação do Timer A.
+### Para todas as questões abaixo, utilize o modo de comparação do Timer A.
 
 ## 1. Para os itens abaixo, confira a diferença no brilho do LED.
 ### (a) Pisque o LED no pino P1.6 (msp430fr2433 é P1.1) numa frequência de 100 Hz e ciclo de trabalho de 25%.

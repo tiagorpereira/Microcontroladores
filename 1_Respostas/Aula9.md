@@ -1,4 +1,6 @@
-## 1. Escreva uma função em C que faz o debounce de botões ligados à porta P1.
+## 1. Escreva uma função em C que faz o debounce de botões ligados à porta P2.
+
+Questão reformulada para porta P2 com intuito de teste no MSP430FR2433 pois os pushbuttons instalados então localizados nas portas P2.3 e P2.7
 
 ```C
 #include <msp430fr2433.h>

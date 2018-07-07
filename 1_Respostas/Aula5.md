@@ -1,11 +1,11 @@
-## Para as questões 2 a 5, considere que as variáveis `f`, `g`, `h`, `i` e `j` são do tipo inteiro (16 bits na arquitetura do MSP430), e que o vetor `A[]` é do tipo inteiro. Estas variáveis estão armazenadas nos seguintes registradores:
+### Para as questões 2 a 5, considere que as variáveis `f`, `g`, `h`, `i` e `j` são do tipo inteiro (16 bits na arquitetura do MSP430), e que o vetor `A[]` é do tipo inteiro. Estas variáveis estão armazenadas nos seguintes registradores:
 - f: R4
 - g: R5
 - h: R6
 - i: R7
 - j: R8
 - A: R9
-## Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores temporários.
+### Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores temporários.
 
 ## 1. Escreva os trechos de código assembly do MSP430 para:
 ###	(a) Somente setar o bit menos significativo de R5.
